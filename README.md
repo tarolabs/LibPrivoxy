@@ -2,9 +2,16 @@ Privoxy is a non-caching web proxy with advanced filtering capabilities for enha
 <br/>
 Many people want to integrate Privoxy into their own projects, I made some changes to the Privoxy codes to compiled into a DLL or static library, so that you can better integrate it into their own projects.<br/>
 <br/>
+Key features:
+1, All privoxy features.
+2, Supported username and password verification of socks proxy.
+3, Supported rules for auto-skip chinese websites.
+4, Supported encrypted username and password in configuration file.
+<br/>
 Prifoxy: https://www.privoxy.org/<br/><br/>
 Dependent:<br/>
 Cryptopp,https://www.cryptopp.com/<br/>
+<br/>
 Develop environment:<br/>
 VS.net 2010<br/>
 <br/>
