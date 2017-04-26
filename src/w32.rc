@@ -1,0 +1,236 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Simplified, PRC) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_IDLE                ICON                    "icons/privoxy.ico"
+IDI_MAINICON            ICON                    "icons/privoxy.ico"
+IDI_ANIMATED1           ICON                    "icons/radar-01.ico"
+IDI_ANIMATED2           ICON                    "icons/radar-02.ico"
+IDI_ANIMATED3           ICON                    "icons/radar-03.ico"
+IDI_ANIMATED4           ICON                    "icons/radar-04.ico"
+IDI_ANIMATED5           ICON                    "icons/radar-05.ico"
+IDI_ANIMATED6           ICON                    "icons/radar-06.ico"
+IDI_ANIMATED7           ICON                    "icons/radar-07.ico"
+IDI_ANIMATED8           ICON                    "icons/radar-08.ico"
+IDI_OFF                 ICON                    "icons/off.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,26,0
+ PRODUCTVERSION 3,0,26,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "The Privoxy team - www.privoxy.org, Tarolabs - www.tarolabs.com, SocksCap64 - https://www.sockscap64.com"
+            VALUE "FileDescription", "Privoxy"
+            VALUE "FileVersion", "3.0.26"
+            VALUE "InternalName", "Privoxy"
+            VALUE "LegalCopyright", "Distributed under the GNU GPL, Tarolabs - www.tarolabs.com, SocksCap64 - https://www.sockscap64.com"
+            VALUE "OriginalFilename", "privoxy.exe"
+            VALUE "ProductName", "Privoxy"
+            VALUE "ProductVersion", "3.0.26"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TRAYMENU MENU
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "E&xit Privoxy",               ID_FILE_EXIT
+        MENUITEM SEPARATOR
+        POPUP "E&dit.."
+        BEGIN
+            MENUITEM "&Main Configuration",         ID_TOOLS_EDITCONFIG
+            MENUITEM "&Default Actions",            ID_TOOLS_EDITDEFAULTACTIONS
+            MENUITEM "&User Actions",               ID_TOOLS_EDITUSERACTIONS
+            MENUITEM "Default &Filters",            ID_TOOLS_EDITDEFAULTFILTERS
+            MENUITEM "U&ser Filters",               ID_TOOLS_EDITUSERFILTERS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Show Privoxy &Window",        ID_TOGGLE_SHOWWINDOW, CHECKED
+    END
+END
+
+IDR_LOGVIEW MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Copy",                        ID_EDIT_COPY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Clear Log\tCtrl+D",          ID_VIEW_CLEARLOG
+        MENUITEM SEPARATOR
+        MENUITEM "&Log Messages",               ID_VIEW_LOGMESSAGES, CHECKED
+        MENUITEM "Message &Highlighting",       ID_VIEW_MESSAGEHIGHLIGHTING, CHECKED
+        MENUITEM "Limit &Buffer Size",          ID_VIEW_LIMITBUFFERSIZE, CHECKED
+        MENUITEM "&Activity Animation",         ID_VIEW_ACTIVITYANIMATION, CHECKED
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "Edit Main &Configuration",    ID_TOOLS_EDITCONFIG
+        MENUITEM "Edit &Default Actions",       ID_TOOLS_EDITDEFAULTACTIONS
+        MENUITEM "Edit &User Actions",          ID_TOOLS_EDITUSERACTIONS
+        MENUITEM "Edit Default &Filters",       ID_TOOLS_EDITDEFAULTFILTERS
+        MENUITEM "Edit U&ser Filters",          ID_TOOLS_EDITUSERFILTERS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Privoxy &FAQ",                ID_HELP_FAQ
+        MENUITEM "Privoxy &Manual",             ID_HELP_MANUAL
+        MENUITEM "GNU &General Public Licence", ID_HELP_GPL
+        MENUITEM SEPARATOR
+        MENUITEM "Privoxy Status...",           ID_HELP_STATUS
+        MENUITEM SEPARATOR
+        MENUITEM "About Privoxy...",            ID_HELP_ABOUT
+    END
+END
+
+IDR_POPUP_SELECTION MENU
+BEGIN
+    POPUP "Popup"
+    BEGIN
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "D",            ID_VIEW_CLEARLOG,       VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEMPLATES
+//
+
+blocked                 TEMPLATES               "templates\\blocked"
+cgi-style.css           TEMPLATES               "templates\\cgi-style.css"
+cgi-error-404           TEMPLATES               "templates\\cgi-error-404"
+cgi-error-bad-param     TEMPLATES               "templates\\cgi-error-bad-param"
+cgi-error-disabled      TEMPLATES               "templates\\cgi-error-disabled"
+cgi-error-file          TEMPLATES               "templates\\cgi-error-file"
+cgi-error-file-read-only TEMPLATES               "templates\\cgi-error-file-read-only"
+cgi-error-modified      TEMPLATES               "templates\\cgi-error-modified"
+cgi-error-parse         TEMPLATES               "templates\\cgi-error-parse"
+client-tags             TEMPLATES               "templates\\client-tags"
+connect-failed          TEMPLATES               "templates\\connect-failed"
+connection-timeout      TEMPLATES               "templates\\connection-timeout"
+default                 TEMPLATES               "templates\\default"
+edit-actions-add-url-form TEMPLATES               "templates\\edit-actions-add-url-form"
+edit-actions-for-url    TEMPLATES               "templates\\edit-actions-for-url"
+edit-actions-for-url-filter TEMPLATES               "templates\\edit-actions-for-url-filter"
+edit-actions-list       TEMPLATES               "templates\\edit-actions-list"
+edit-actions-list-button TEMPLATES               "templates\\edit-actions-list-button"
+edit-actions-list-section TEMPLATES               "templates\\edit-actions-list-section"
+edit-actions-list-url   TEMPLATES               "templates\\edit-actions-list-url"
+edit-actions-remove-url-form TEMPLATES               "templates\\edit-actions-remove-url-form"
+edit-actions-url-form   TEMPLATES               "templates\\edit-actions-url-form"
+forwarding-failed       TEMPLATES               "templates\\forwarding-failed"
+mod-local-help          TEMPLATES               "templates\\mod-local-help"
+mod-support-and-service TEMPLATES               "templates\\mod-support-and-service"
+mod-title               TEMPLATES               "templates\\mod-title"
+mod-unstable-warning    TEMPLATES               "templates\\mod-unstable-warning"
+no-server-data          TEMPLATES               "templates\\no-server-data"
+no-such-domain          TEMPLATES               "templates\\no-such-domain"
+show-request            TEMPLATES               "templates\\show-request"
+show-status             TEMPLATES               "templates\\show-status"
+show-status-file        TEMPLATES               "templates\\show-status-file"
+show-url-info           TEMPLATES               "templates\\show-url-info"
+show-version            TEMPLATES               "templates\\show-version"
+toggle                  TEMPLATES               "templates\\toggle"
+toggle-mini             TEMPLATES               "templates\\toggle-mini"
+untrusted               TEMPLATES               "templates\\untrusted"
+url-info-osd.xml        TEMPLATES               "templates\\url-info-osd.xml"
+echo-pac                TEMPLATES               "templates\\echo-pac"
+#endif    // Chinese (Simplified, PRC) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

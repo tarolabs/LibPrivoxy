@@ -1,0 +1,9 @@
+LIBRARY LibPrivoxy
+EXPORTS
+start_privoxy
+stop_privoxy
+get_privoxy_port
+calc_cmd_hash
+GetPrivoxyPacUrl
+GetPrivoxyProxyAddr
+is_privoxy_started

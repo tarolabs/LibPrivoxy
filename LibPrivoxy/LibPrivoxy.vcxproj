@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Lib_Debug|Win32">
+      <Configuration>Lib_Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Lib_Release|Win32">
+      <Configuration>Lib_Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{799D237D-7248-49D5-925F-3FA633BBD867}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>LibPrivoxy</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)LibPrivoxy;$(SolutionDir)src;$(SolutionDir)src\pcre;$(SolutionDir)cryptopp562;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Debug;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)DLL_Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)LibPrivoxy;$(SolutionDir)src;$(SolutionDir)src\pcre;$(SolutionDir)cryptopp562;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Debug;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)LIB_Debug</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)LibPrivoxy;$(SolutionDir)src;$(SolutionDir)src\pcre;$(SolutionDir)cryptopp562;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Release;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)DLL_Release</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)LibPrivoxy;$(SolutionDir)src;$(SolutionDir)src\pcre;$(SolutionDir)cryptopp562;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Release;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)LIB_Release</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBPRIVOXY_EXPORTS;%(PreprocessorDefinitions);HAVE_STRERROR;STATIC_PCRE;STATIC_PCRS;FEATURE_CLIENT_TAGS;HAVE_MEMMOVE;_WIN_CONSOLE;LIBPRIVOXY;FEATURE_GRACEFUL_TERMINATION;RES_IN_DLL;PAC_SCRIPT;FEATURE_NSCACHE;FEATURE_ENCRYPTCFG_N;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>libprivoxy.def</ModuleDefinitionFile>
+      <ImportLibrary>$(SolutionDir)DLL_Debug\LibPrivoxyD.lib</ImportLibrary>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cryptlib32d.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;LIBPRIVOXY_EXPORTS;%(PreprocessorDefinitions);HAVE_STRERROR;STATIC_PCRE;STATIC_PCRS;FEATURE_CLIENT_TAGS;HAVE_MEMMOVE;_WIN_CONSOLE;LIBPRIVOXY;FEATURE_GRACEFUL_TERMINATION;RES_IN_DLL;PAC_SCRIPT;FEATURE_NSCACHE;FEATURE_ENCRYPTCFG_N;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ModuleDefinitionFile>libprivoxy.def</ModuleDefinitionFile>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\LibPrivoxyD.lib</ImportLibrary>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cryptlib32d.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBPRIVOXY_EXPORTS;%(PreprocessorDefinitions);HAVE_STRERROR;STATIC_PCRE;STATIC_PCRS;FEATURE_CLIENT_TAGS;HAVE_MEMMOVE;_WIN_CONSOLE;LIBPRIVOXY;FEATURE_GRACEFUL_TERMINATION;RES_IN_DLL;PAC_SCRIPT;FEATURE_NSCACHE;FEATURE_ENCRYPTCFG_N;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>libprivoxy.def</ModuleDefinitionFile>
+      <ImportLibrary>$(SolutionDir)DLL_Release\LibPrivoxyR.lib</ImportLibrary>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cryptlib32r.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;LIBPRIVOXY_EXPORTS;%(PreprocessorDefinitions);HAVE_STRERROR;STATIC_PCRE;STATIC_PCRS;FEATURE_CLIENT_TAGS;HAVE_MEMMOVE;_WIN_CONSOLE;LIBPRIVOXY;FEATURE_GRACEFUL_TERMINATION;RES_IN_DLL;PAC_SCRIPT;FEATURE_NSCACHE;FEATURE_ENCRYPTCFG_N;</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>libprivoxy.def</ModuleDefinitionFile>
+      <ImportLibrary>$(SolutionDir)$(Configuration)\LibPrivoxyR.lib</ImportLibrary>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);cryptlib32r.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\src\icons\off.ico" />
+    <None Include="..\src\icons\privoxy.ico" />
+    <None Include="..\src\icons\radar-01.ico" />
+    <None Include="..\src\icons\radar-02.ico" />
+    <None Include="..\src\icons\radar-03.ico" />
+    <None Include="..\src\icons\radar-04.ico" />
+    <None Include="..\src\icons\radar-05.ico" />
+    <None Include="..\src\icons\radar-06.ico" />
+    <None Include="..\src\icons\radar-07.ico" />
+    <None Include="..\src\icons\radar-08.ico" />
+    <None Include="..\src\templates\blocked" />
+    <None Include="..\src\templates\cgi-error-404" />
+    <None Include="..\src\templates\cgi-error-bad-param" />
+    <None Include="..\src\templates\cgi-error-disabled" />
+    <None Include="..\src\templates\cgi-error-file" />
+    <None Include="..\src\templates\cgi-error-file-read-only" />
+    <None Include="..\src\templates\cgi-error-modified" />
+    <None Include="..\src\templates\cgi-error-parse" />
+    <None Include="..\src\templates\cgi-style.css" />
+    <None Include="..\src\templates\client-tags" />
+    <None Include="..\src\templates\connect-failed" />
+    <None Include="..\src\templates\connection-timeout" />
+    <None Include="..\src\templates\default" />
+    <None Include="..\src\templates\echo-chinese-website-pac" />
+    <None Include="..\src\templates\echo-pac" />
+    <None Include="..\src\templates\edit-actions-add-url-form" />
+    <None Include="..\src\templates\edit-actions-for-url" />
+    <None Include="..\src\templates\edit-actions-for-url-filter" />
+    <None Include="..\src\templates\edit-actions-list" />
+    <None Include="..\src\templates\edit-actions-list-button" />
+    <None Include="..\src\templates\edit-actions-list-section" />
+    <None Include="..\src\templates\edit-actions-list-url" />
+    <None Include="..\src\templates\edit-actions-remove-url-form" />
+    <None Include="..\src\templates\edit-actions-url-form" />
+    <None Include="..\src\templates\forwarding-failed" />
+    <None Include="..\src\templates\mod-local-help" />
+    <None Include="..\src\templates\mod-support-and-service" />
+    <None Include="..\src\templates\mod-title" />
+    <None Include="..\src\templates\mod-unstable-warning" />
+    <None Include="..\src\templates\no-server-data" />
+    <None Include="..\src\templates\no-such-domain" />
+    <None Include="..\src\templates\show-request" />
+    <None Include="..\src\templates\show-status" />
+    <None Include="..\src\templates\show-status-file" />
+    <None Include="..\src\templates\show-url-info" />
+    <None Include="..\src\templates\show-version" />
+    <None Include="..\src\templates\toggle" />
+    <None Include="..\src\templates\toggle-mini" />
+    <None Include="..\src\templates\untrusted" />
+    <None Include="..\src\templates\url-info-osd.xml" />
+    <None Include="libprivoxy.def" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\libprivoxy.h" />
+    <ClInclude Include="..\src\acconfig.h" />
+    <ClInclude Include="..\src\actionlist.h" />
+    <ClInclude Include="..\src\actions.h" />
+    <ClInclude Include="..\src\amiga.h" />
+    <ClInclude Include="..\src\cgi.h" />
+    <ClInclude Include="..\src\cgiedit.h" />
+    <ClInclude Include="..\src\cgisimple.h" />
+    <ClInclude Include="..\src\client-tags.h" />
+    <ClInclude Include="..\src\config.h" />
+    <ClInclude Include="..\src\cygwin.h" />
+    <ClInclude Include="..\src\deanimate.h" />
+    <ClInclude Include="..\src\encode.h" />
+    <ClInclude Include="..\src\errlog.h" />
+    <ClInclude Include="..\src\filters.h" />
+    <ClInclude Include="..\src\gateway.h" />
+    <ClInclude Include="..\src\gettimewin.h" />
+    <ClInclude Include="..\src\jbsockets.h" />
+    <ClInclude Include="..\src\jcc.h" />
+    <ClInclude Include="..\src\list.h" />
+    <ClInclude Include="..\src\loadcfg.h" />
+    <ClInclude Include="..\src\loaders.h" />
+    <ClInclude Include="..\src\miscutil.h" />
+    <ClInclude Include="..\src\nscache.h" />
+    <ClInclude Include="..\src\parsers.h" />
+    <ClInclude Include="..\src\pcre\config.h" />
+    <ClInclude Include="..\src\pcre\internal.h" />
+    <ClInclude Include="..\src\pcre\pcre.h" />
+    <ClInclude Include="..\src\pcre\pcreposix.h" />
+    <ClInclude Include="..\src\pcrs.h" />
+    <ClInclude Include="..\src\project.h" />
+    <ClInclude Include="..\src\resource.h" />
+    <ClInclude Include="..\src\ssplit.h" />
+    <ClInclude Include="..\src\strptime.h" />
+    <ClInclude Include="..\src\urlmatch.h" />
+    <ClInclude Include="..\src\w32log.h" />
+    <ClInclude Include="..\src\w32res.h" />
+    <ClInclude Include="..\src\w32svrapi.h" />
+    <ClInclude Include="..\src\w32taskbar.h" />
+    <ClInclude Include="..\src\win32.h" />
+    <ClInclude Include="filebuilder.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\libprivoxy.cpp" />
+    <ClCompile Include="..\src\actions.c" />
+    <ClCompile Include="..\src\amiga.c" />
+    <ClCompile Include="..\src\cgi.c" />
+    <ClCompile Include="..\src\cgiedit.c" />
+    <ClCompile Include="..\src\cgisimple.c" />
+    <ClCompile Include="..\src\client-tags.c" />
+    <ClCompile Include="..\src\deanimate.c" />
+    <ClCompile Include="..\src\encode.c" />
+    <ClCompile Include="..\src\errlog.c" />
+    <ClCompile Include="..\src\filters.c" />
+    <ClCompile Include="..\src\gateway.c" />
+    <ClCompile Include="..\src\gettimewin.c" />
+    <ClCompile Include="..\src\jbsockets.c" />
+    <ClCompile Include="..\src\jcc.c" />
+    <ClCompile Include="..\src\list.c" />
+    <ClCompile Include="..\src\loadcfg.c" />
+    <ClCompile Include="..\src\loaders.c" />
+    <ClCompile Include="..\src\miscutil.c" />
+    <ClCompile Include="..\src\nscache.cpp" />
+    <ClCompile Include="..\src\parsers.c" />
+    <ClCompile Include="..\src\pcre\chartables.c" />
+    <ClCompile Include="..\src\pcre\get.c" />
+    <ClCompile Include="..\src\pcre\maketables.c" />
+    <ClCompile Include="..\src\pcre\pcre.c" />
+    <ClCompile Include="..\src\pcre\pcreposix.c" />
+    <ClCompile Include="..\src\pcre\study.c" />
+    <ClCompile Include="..\src\pcrs.c" />
+    <ClCompile Include="..\src\ssplit.c" />
+    <ClCompile Include="..\src\urlmatch.c" />
+    <ClCompile Include="..\src\w32log.c" />
+    <ClCompile Include="..\src\w32svrapi.c" />
+    <ClCompile Include="..\src\w32taskbar.c" />
+    <ClCompile Include="..\src\win32.c" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="filebuilder.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Lib_Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\w32.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

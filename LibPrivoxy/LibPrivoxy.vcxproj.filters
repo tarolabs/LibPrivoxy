@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="pcre">
+      <UniqueIdentifier>{5f45f31a-4505-45b1-98ae-7db8473438f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="..\src\icons\privoxy.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-01.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-02.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-03.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-04.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-05.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-06.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-07.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\radar-08.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\src\icons\off.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="libprivoxy.def">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\src\templates\blocked" />
+    <None Include="..\src\templates\cgi-style.css" />
+    <None Include="..\src\templates\cgi-error-404" />
+    <None Include="..\src\templates\cgi-error-bad-param" />
+    <None Include="..\src\templates\cgi-error-disabled" />
+    <None Include="..\src\templates\cgi-error-file" />
+    <None Include="..\src\templates\cgi-error-file-read-only" />
+    <None Include="..\src\templates\cgi-error-modified" />
+    <None Include="..\src\templates\cgi-error-parse" />
+    <None Include="..\src\templates\client-tags" />
+    <None Include="..\src\templates\connect-failed" />
+    <None Include="..\src\templates\connection-timeout" />
+    <None Include="..\src\templates\default" />
+    <None Include="..\src\templates\edit-actions-add-url-form" />
+    <None Include="..\src\templates\edit-actions-for-url" />
+    <None Include="..\src\templates\edit-actions-for-url-filter" />
+    <None Include="..\src\templates\edit-actions-list" />
+    <None Include="..\src\templates\edit-actions-list-button" />
+    <None Include="..\src\templates\edit-actions-list-section" />
+    <None Include="..\src\templates\edit-actions-list-url" />
+    <None Include="..\src\templates\edit-actions-remove-url-form" />
+    <None Include="..\src\templates\edit-actions-url-form" />
+    <None Include="..\src\templates\forwarding-failed" />
+    <None Include="..\src\templates\mod-local-help" />
+    <None Include="..\src\templates\mod-support-and-service" />
+    <None Include="..\src\templates\mod-title" />
+    <None Include="..\src\templates\mod-unstable-warning" />
+    <None Include="..\src\templates\no-server-data" />
+    <None Include="..\src\templates\no-such-domain" />
+    <None Include="..\src\templates\show-request" />
+    <None Include="..\src\templates\show-status" />
+    <None Include="..\src\templates\show-status-file" />
+    <None Include="..\src\templates\show-url-info" />
+    <None Include="..\src\templates\show-version" />
+    <None Include="..\src\templates\toggle" />
+    <None Include="..\src\templates\toggle-mini" />
+    <None Include="..\src\templates\untrusted" />
+    <None Include="..\src\templates\url-info-osd.xml" />
+    <None Include="..\src\templates\echo-pac" />
+    <None Include="..\src\templates\echo-chinese-website-pac" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\w32log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\w32res.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\w32svrapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\w32taskbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\urlmatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ssplit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\strptime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\project.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\parsers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcrs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\miscutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\loadcfg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\loaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\jbsockets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\jcc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\encode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\errlog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\filters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gateway.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cygwin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\deanimate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\client-tags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cgi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cgiedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cgisimple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\acconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actionlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\amiga.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcre\pcreposix.h">
+      <Filter>pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcre\config.h">
+      <Filter>pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcre\internal.h">
+      <Filter>pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\pcre\pcre.h">
+      <Filter>pcre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gettimewin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libprivoxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\nscache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filebuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\w32log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\w32svrapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\w32taskbar.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\urlmatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ssplit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\parsers.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcrs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\miscutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\list.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\loadcfg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\loaders.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\jbsockets.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\jcc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\errlog.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\filters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gateway.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\deanimate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\client-tags.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cgi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cgiedit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cgisimple.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actions.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\amiga.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\study.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\chartables.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\get.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\maketables.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\pcre.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pcre\pcreposix.c">
+      <Filter>pcre</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gettimewin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libprivoxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\nscache.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="filebuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\w32.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
